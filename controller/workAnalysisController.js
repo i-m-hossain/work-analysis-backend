@@ -7,7 +7,7 @@ const Data = require("../model/dataModel");
 exports.handleUploadData = async function (req, res) {
     //getting the filename
     const fileName = req.file.filename;
-    
+
     //reading the file 
     const stream = byline(fs.createReadStream(`./uploads/${fileName}`));
     let index = 0;
@@ -46,7 +46,13 @@ exports.handleUploadData = async function (req, res) {
                 } else if (key === "exit") {
                     singleData[key] = Number(singleData[key]); //transforming to Integer
                 } else {
-                    singleData[key] = new Date(singleData[key]); //transforming to Date object
+                    const date = new Date(singleData[key])
+                    singleData[key] = {
+                        year:Number(date.getFullYear()),
+                        month:Number(date.getMonth()),
+                        day:Number(date.getDay()),
+                        hour:Number(date.getHours())
+                    }; //transforming required format
                 }
             });
             return singleData;

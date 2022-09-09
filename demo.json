@@ -1,0 +1,257 @@
+{
+    "msg": "success",
+    "result": [
+        {
+            "entry": 1,
+            "exit": 1,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 10
+            },
+            "_id": "631bafb11352a671f9543f4c",
+            "__v": 0
+        },
+        {
+            "entry": 2,
+            "exit": 1,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 10
+            },
+            "_id": "631bafb11352a671f9543f4d",
+            "__v": 0
+        },
+        {
+            "entry": 5,
+            "exit": 3,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 10
+            },
+            "_id": "631bafb11352a671f9543f4e",
+            "__v": 0
+        },
+        {
+            "entry": 9,
+            "exit": 2,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 10
+            },
+            "_id": "631bafb11352a671f9543f4f",
+            "__v": 0
+        },
+        {
+            "entry": 1,
+            "exit": 5,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 10
+            },
+            "_id": "631bafb11352a671f9543f50",
+            "__v": 0
+        },
+        {
+            "entry": 2,
+            "exit": 0,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 11
+            },
+            "_id": "631bafb11352a671f9543f51",
+            "__v": 0
+        },
+        {
+            "entry": 1,
+            "exit": 1,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 11
+            },
+            "_id": "631bafb11352a671f9543f52",
+            "__v": 0
+        },
+        {
+            "entry": 6,
+            "exit": 7,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 11
+            },
+            "_id": "631bafb11352a671f9543f53",
+            "__v": 0
+        },
+        {
+            "entry": 3,
+            "exit": 1,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 11
+            },
+            "_id": "631bafb11352a671f9543f54",
+            "__v": 0
+        },
+        {
+            "entry": 1,
+            "exit": 1,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 12
+            },
+            "_id": "631bafb11352a671f9543f55",
+            "__v": 0
+        },
+        {
+            "entry": 5,
+            "exit": 2,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 12
+            },
+            "_id": "631bafb11352a671f9543f56",
+            "__v": 0
+        },
+        {
+            "entry": 9,
+            "exit": 5,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 12
+            },
+            "_id": "631bafb11352a671f9543f57",
+            "__v": 0
+        },
+        {
+            "entry": 6,
+            "exit": 1,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 12
+            },
+            "_id": "631bafb11352a671f9543f58",
+            "__v": 0
+        },
+        {
+            "entry": 1,
+            "exit": 1,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 13
+            },
+            "_id": "631bafb11352a671f9543f59",
+            "__v": 0
+        },
+        {
+            "entry": 6,
+            "exit": 3,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 13
+            },
+            "_id": "631bafb11352a671f9543f5a",
+            "__v": 0
+        },
+        {
+            "entry": 5,
+            "exit": 3,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 14
+            },
+            "_id": "631bafb11352a671f9543f5b",
+            "__v": 0
+        },
+        {
+            "entry": 1,
+            "exit": 1,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 14
+            },
+            "_id": "631bafb11352a671f9543f5c",
+            "__v": 0
+        },
+        {
+            "entry": 7,
+            "exit": 1,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 15
+            },
+            "_id": "631bafb11352a671f9543f5d",
+            "__v": 0
+        },
+        {
+            "entry": 1,
+            "exit": 3,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 16
+            },
+            "_id": "631bafb11352a671f9543f5e",
+            "__v": 0
+        },
+        {
+            "entry": 7,
+            "exit": 2,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 16
+            },
+            "_id": "631bafb11352a671f9543f5f",
+            "__v": 0
+        },
+        {
+            "entry": 5,
+            "exit": 1,
+            "datetime": {
+                "year": 2022,
+                "month": 8,
+                "day": 0,
+                "hour": 17
+            },
+            "_id": "631bafb11352a671f9543f60",
+            "__v": 0
+        }
+    ]
+}
