@@ -1,5 +1,6 @@
 const express = require("express");
 const { handleLogin, handleRegister, handleFetchUsers, handelDeleteUser } = require("../controller/authController");
+const adminAuth = require("../middleware/adminAuth");
 
 
 // authRoutes is an instance of the express router.
@@ -10,8 +11,8 @@ const authRoutes = express.Router();
 //  create a new record.
 authRoutes.route("/register").post(handleRegister);
 authRoutes.route("/login").post(handleLogin);
-authRoutes.route("/fetchUsers").get(handleFetchUsers);
-authRoutes.route('/deleteUser/:id').delete(handelDeleteUser)
+authRoutes.get("/fetchUsers", adminAuth, handleFetchUsers)
+authRoutes.delete('/deleteUser/:id', adminAuth, handelDeleteUser)
 
 
 module.exports = authRoutes;
