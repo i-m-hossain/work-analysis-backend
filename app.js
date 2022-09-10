@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+var cors = require('cors')
 const dbConnect = require("./db/dbConnect");
 
 //custom imports
@@ -8,7 +9,7 @@ const adminAuth = require("./middleware/adminAuth");
 
 //app instance
 const app = express();
-
+app.use(cors())
 // body parser configuration
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

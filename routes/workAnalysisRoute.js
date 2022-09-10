@@ -10,7 +10,8 @@ const storage = multer.diskStorage({
     },
 });
 const upload = multer({ storage: storage });
-const { handleUploadData } = require("../controller/workAnalysisController");
+//get all controllers functions routes
+const { handleUploadData, handleHourlyWorkerCount } = require("../controller/workAnalysisController");
 
 // workAnalysisRoutes is an instance of the express router.
 // We use it to define our routes.
@@ -19,5 +20,6 @@ const workAnalysisRoutes = express.Router();
 
 //  create a new record.
 workAnalysisRoutes.post("/upload-data", upload.single("file"), handleUploadData);
+workAnalysisRoutes.get("/hourlyWorkerCount", handleHourlyWorkerCount);
 
 module.exports = workAnalysisRoutes;

@@ -64,7 +64,7 @@ exports.handleUploadData = async function (req, res) {
                 //removing file after the data is inserted to database
                 fs.unlinkSync(`./uploads/${fileName}`);
                 //response
-                res.json({ msg: "success", result });
+                res.json({ message: "success", result });
             })
             .catch(function (error) {
                 console.log(error); // Failure
@@ -72,3 +72,26 @@ exports.handleUploadData = async function (req, res) {
         
     });
 };
+exports.handleHourlyWorkerCount=async function(req,res){
+    try {
+        const dataCollection = await Data.find()
+        // const data = await dataCollection.json()
+        if(dataCollection){
+            const dataArray=[]
+            const result = dataCollection.reduce((acc,d)=>{
+                const found = acc.find(item=>item.datetime.hour === d.datetime.hour)
+                if(!found){
+                    acc.push({
+                        datetime:d.datetime,
+                        worker_count: d.entry
+                    })
+                }
+            },[])
+        };
+        res.json({message: "success", dataCollection})
+        
+        
+    } catch (error) {
+        res.json({message: 'could not get data', error})
+    }
+}

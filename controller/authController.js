@@ -20,6 +20,7 @@ exports.handleRegister = async function (req, res) {
         res.status(500).send({
             message: "Error creating user",
             error,
+            
         });
     }
 };
@@ -54,3 +55,21 @@ exports.handleLogin = async function (req, res) {
     }
 };
 
+exports.handleFetchUsers=async(req, res)=>{
+    try {
+        const users = await User.find()
+        res.status(200).json({message: "users found", users})
+    } catch (error) {
+        res.status(500).json({message: 'failed to fetch', error})
+    }
+}
+exports.handelDeleteUser = async(req,res)=>{
+    const userId = req.params.id
+    console.log(userId);
+    try{
+        const deletedUser = await User.findByIdAndDelete(userId)
+        res.status(200).json({message: "user is deleted", deletedUser})
+    }catch(error){
+        res.status(500).json({message: "couldn't delete the user", error})
+    }
+}
