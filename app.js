@@ -25,18 +25,11 @@ app.get("/", (request, response, next) => {
     next();
 });
 
-// authentication endpoint
-app.get("/auth-endpoint", auth, (request, response) => {
-    response.json({ message: "You are authorized to access me" });
-});
-// admin endpoint
-app.get("/admin-endpoint", adminAuth, (request, response) => {
-    response.json({ message: "You are authorized to access me" });
-});
 
 //routes
 app.use(require("./routes/authRoutes"));
 app.use(require('./routes/workAnalysisRoute'))
+app.use(require('./routes/workerRouter'))
 
 //server start
 app.listen(port, () => {

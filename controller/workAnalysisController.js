@@ -8,7 +8,7 @@ exports.handleUploadData = async function (req, res) {
     //getting the filename
     const fileName = req.file.filename;
 
-    //reading the file 
+    //reading the file
     const stream = byline(fs.createReadStream(`./uploads/${fileName}`));
     let index = 0;
     let headers;
@@ -46,12 +46,12 @@ exports.handleUploadData = async function (req, res) {
                 } else if (key === "exit") {
                     singleData[key] = Number(singleData[key]); //transforming to Integer
                 } else {
-                    const date = new Date(singleData[key])
+                    const date = new Date(singleData[key]);
                     singleData[key] = {
-                        year:Number(date.getFullYear()),
-                        month:Number(date.getMonth()),
-                        day:Number(date.getDay()),
-                        hour:Number(date.getHours())
+                        year: Number(date.getFullYear()),
+                        month: Number(date.getMonth()),
+                        day: Number(date.getDay()),
+                        hour: Number(date.getHours()),
                     }; //transforming required format
                 }
             });
@@ -69,29 +69,5 @@ exports.handleUploadData = async function (req, res) {
             .catch(function (error) {
                 console.log(error); // Failure
             });
-        
     });
 };
-exports.handleHourlyWorkerCount=async function(req,res){
-    try {
-        const dataCollection = await Data.find()
-        // const data = await dataCollection.json()
-        if(dataCollection){
-            const dataArray=[]
-            const result = dataCollection.reduce((acc,d)=>{
-                const found = acc.find(item=>item.datetime.hour === d.datetime.hour)
-                if(!found){
-                    acc.push({
-                        datetime:d.datetime,
-                        worker_count: d.entry
-                    })
-                }
-            },[])
-        };
-        res.json({message: "success", dataCollection})
-        
-        
-    } catch (error) {
-        res.json({message: 'could not get data', error})
-    }
-}
