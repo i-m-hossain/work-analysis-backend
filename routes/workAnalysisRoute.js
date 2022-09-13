@@ -20,6 +20,6 @@ const workAnalysisRoutes = express.Router();
 
 //  create a new record.
 workAnalysisRoutes.post("/upload-data", upload.single("file"), handleUploadData);
-workAnalysisRoutes.get("/worker", upload.single("file"), handleWorkerCount);
+// workAnalysisRoutes.get("/worker", upload.single("file"), handleWorkerCount);
 
 module.exports = workAnalysisRoutes;

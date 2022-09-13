@@ -73,21 +73,23 @@ exports.handleUploadData = async function (req, res) {
     });
 };
 //just for test purpose
-exports.handleWorkerCount = async function(req,res){
-    const data = await Data.find()
-    if(data){
-      const result = data.reduce((acc, d) => {
-      const found = acc.find((item) => item.datetime.hour === d.datetime.hour);
-      if (!found) {
-        acc.push({
-            datetime: d.datetime,
-            worker_count: d.entry-d.exit,
-        })
-      }else {
-        found.worker_count= found.worker_count+d.entry-d.exit;
-      }
-      return acc;
-      }, []);
-      res.json({result: result})
-    };
-}
+exports.handleWorkerCount = async function (req, res) {
+    const data = await Data.find();
+    if (data) {
+        const result = data.reduce((acc, d) => {
+            const found = acc.find(
+                (item) => item.datetime.hour === d.datetime.hour
+            );
+            if (!found) {
+                acc.push({
+                    datetime: d.datetime,
+                    worker_count: d.entry - d.exit,
+                });
+            } else {
+                found.worker_count = found.worker_count + d.entry - d.exit;
+            }
+            return acc;
+        }, []);
+        res.json({ result: result });
+    }
+};
